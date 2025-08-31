@@ -1,0 +1,144 @@
+/* Theme */
+:root{
+  --green: #2ecc71;       /* apple body */
+  --green-dark: #27ae60;  /* outline/leaf */
+  --brown: #795548;       /* stem */
+  --bg: #ffffff;
+  --ink: #3a2f2a;         /* readable body text, brown-ish */
+  --muted: #6b6b6b;
+  --border: #e6e6e6;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.header img.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: block;
+}
+.header h1 {
+  font-size: 24px;
+  line-height: 1.1;
+  margin: 0;
+  color: var(--green-dark);
+}
+.subtitle {
+  margin: 4px 0 20px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Cards / groups */
+fieldset {
+  margin: 18px 0;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--green);
+  border-radius: 10px;
+  background: #fff;
+}
+legend {
+  font-weight: 700;
+  color: var(--brown);
+  padding: 0 6px;
+}
+
+/* Form controls */
+label { display: block; font-weight: 600; color: var(--brown); }
+input, button {
+  padding: 10px 12px;
+  border-radius: 10px;
+  font: inherit;
+}
+input {
+  border: 2px solid var(--green);
+  background: #fff;
+  color: var(--brown);
+  outline: none;
+  min-width: 220px;
+}
+input::placeholder { color: #9b9b9b; }
+input:focus {
+  border-color: var(--green-dark);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--green) 20%, transparent);
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  background: var(--green);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform .06s ease, box-shadow .2s ease, background .2s ease;
+  box-shadow: 0 2px 10px color-mix(in srgb, var(--green) 25%, transparent);
+}
+.btn:hover { background: var(--green-dark); }
+.btn:active { transform: translateY(1px); }
+.btn.secondary {
+  background: #fff;
+  color: var(--green-dark);
+  border: 2px solid var(--green);
+}
+
+/* Layout helpers */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: end;
+}
+.grow { flex: 1 1 240px; }
+
+/* Messages */
+.muted { color: var(--muted); font-size: 13px; }
+.ok    { color: var(--green-dark); }
+.err   { color: #c0392b; }
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+thead th {
+  background: color-mix(in srgb, var(--green) 12%, white);
+  color: #1f1f1f;
+}
+tbody tr:hover {
+  background: color-mix(in srgb, var(--green) 6%, white);
+}
+
+/* Links */
+a { color: var(--green-dark); text-decoration: none; font-weight: 600; }
+a:hover { text-decoration: underline; }

@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>ResourceHub</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <img class="logo" src="logo256.jpg" alt="ResourceHub logo" />
+      <h1>ResourceHub</h1>
+    </header>
+    <p class="subtitle">Share study links by course. Sign up → log in → add a resource → search.</p>
+
+    <fieldset>
+      <legend>Auth</legend>
+      <div class="row">
+        <label>
+          Email
+          <input id="email" type="email" placeholder="you@school.ca">
+        </label>
+        <label>
+          Password
+          <input id="password" type="password" placeholder="At least 6 characters">
+        </label>
+        <button id="signupBtn" type="button" class="btn">Sign up</button>
+        <button id="loginBtn" type="button" class="btn secondary">Log in</button>
+      </div>
+      <div id="authMsg" class="muted">Not logged in</div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Add Resource (requires login)</legend>
+      <div class="row">
+        <label>
+          Course Code
+          <input id="courseCode" placeholder="MATH1ZB3">
+        </label>
+        <label class="grow">
+          Title
+          <input id="title" placeholder="Midterm 2024">
+        </label>
+        <label class="grow">
+          Link
+          <input id="link" placeholder="https://...">
+        </label>
+        <button id="addBtn" type="button" class="btn">Add</button>
+      </div>
+      <div id="addMsg" class="muted"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Browse</legend>
+      <div class="row">
+        <label>
+          Course Code
+          <input id="qCourse" placeholder="MATH1ZB3">
+        </label>
+        <button id="searchBtn" type="button" class="btn">Search</button>
+        <button id="allBtn" type="button" class="btn secondary">Show all</button>
+      </div>
+      <table>
+        <thead><tr><th>Title</th><th>Link</th><th>Course</th><th>Added by</th></tr></thead>
+        <tbody id="results"></tbody>
+      </table>
+    </fieldset>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

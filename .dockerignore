@@ -1,0 +1,25 @@
+# deps & build output (image rebuilds these)
+node_modules
+dist
+.prisma
+
+# env/secrets
+.env
+prisma/.env
+
+# logs & caches
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# VCS / editor junk
+.git
+.gitignore
+.vscode
+.idea
+.DS_Store
+
+# test artifacts (optional)
+coverage
